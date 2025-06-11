@@ -17,7 +17,7 @@ I built my own versions of Java’s `ArrayList` and `LinkedList` from scratch an
 
 ---
 
-##🧮 Advanced Priority Queue Project
+## 🧮 Advanced Priority Queue Project
 
 I implemented a dynamic Java `PriorityQueue` using a parameterized heap that supports both `min-heap` and `max-heap` modes, and tested its performance using a custom tester.
 
