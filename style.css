@@ -1,10 +1,5 @@
 body {
-  background-image: url("https://i.imgur.com/xDLkiKw.png"); /* hosted version of your image */
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f2eb; /* fallback beige */
+  background-color: #e8dfd3; /* richer, darker beige */
   color: #2f3e46;
   font-family: 'Georgia', serif;
   padding: 40px;
