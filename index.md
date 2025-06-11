@@ -2,6 +2,9 @@
 
 Welcome to my website!
 
+💼 [Connect with me on LinkedIn](https://www.linkedin.com/in/yahia-abouelnasr-348956272)
+
+
 I'm Yahia Abouelnasr — this is my personal space to showcase my projects, code, and learning journey.
 
 ---
