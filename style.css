@@ -1,19 +1,26 @@
 body {
   background-color: #0d1117;
   color: #ffffff;
-  font-family: Arial, sans-serif;
-  margin: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
 }
 
 h1, h2 {
-  color: #58a6ff;
+  color: #f78166;
 }
 
 a {
-  color: #f78166;
+  color: #58a6ff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 30px 0;
+}
+
