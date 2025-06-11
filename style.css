@@ -1,42 +1,44 @@
 body {
-  background-color: #f5efe7; /* warm beige */
+  background-color: #f5f2eb; /* warm modern beige */
   color: #2f3e46;            /* deep muted charcoal */
   font-family: 'Georgia', serif;
   padding: 40px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 h1 {
-  color: #4b6043;           /* elegant soft green */
+  color: #4a6c46;           /* modern soft green */
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 h2 {
-  color: #4b6043;
+  color: #4a6c46;
   font-size: 1.8rem;
   margin-top: 2em;
 }
 
 a {
-  color: #6c584c;           /* earthy brown link */
+  color: #5c4d4d;           /* earthy dark brown link */
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
+  color: #3d3b3b;
   text-decoration: underline;
-  color: #403d39;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cfcfcf;
   margin: 30px 0;
 }
 
 code {
-  background-color: #ece4db;
+  background-color: #ebe6dd;
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.95em;
 }
+
