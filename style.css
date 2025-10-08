@@ -1,5 +1,5 @@
 :root{
-  --bg:white;--card:#f7f3ee;--ink:#232b2b;--muted:#4b5d5b;
+  --bg:#000000;--card:#f7f3ee;--ink:##ff3030;--muted:#4b5d5b;
   --accent:#476a4b;--accent-ink:#fff;--link:#594a4a;--link-hover:#3f3a3a;
   --border:#d8d2ca;--code:#efe9df;--radius:18px;--maxw:980px;
   --shadow:0 10px 25px rgba(0,0,0,.06);
