@@ -1,9 +1,19 @@
 :root{
-  --bg:#000000;--card:#f7f3ee;--ink:##ff3030;--muted:#4b5d5b;
-  --accent:#476a4b;--accent-ink:#fff;--link:#594a4a;--link-hover:#3f3a3a;
-  --border:#d8d2ca;--code:#efe9df;--radius:18px;--maxw:980px;
-  --shadow:0 10px 25px rgba(0,0,0,.06);
+  --bg:#000000;            /* black background */
+  --card:#111111;          /* dark gray cards for contrast */
+  --ink:#e0e6ff;           /* light bluish text */
+  --muted:#9aa3b8;         /* subtle gray-blue for subtext */
+  --accent:#0077ff;        /* main glossy blue */
+  --accent-ink:#ffffff;    /* white text on blue */
+  --link:#66aaff;          /* soft blue links */
+  --link-hover:#99cfff;    /* lighter blue on hover */
+  --border:#1c1f26;        /* dark border tone */
+  --code:#0d0f14;          /* dark code block background */
+  --radius:18px;
+  --maxw:980px;
+  --shadow:0 10px 25px rgba(0,119,255,0.25); /* soft blue glow */
 }
+
 *,*::before,*::after{box-sizing:border-box}
 html:focus-within{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.65}
