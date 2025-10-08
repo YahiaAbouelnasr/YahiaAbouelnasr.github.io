@@ -1,17 +1,27 @@
 :root{
   --bg:#000000;            /* black background */
-  --card:#111111;          /* dark gray cards for contrast */
-  --ink:#e0e6ff;           /* light bluish text */
-  --muted:#9aa3b8;         /* subtle gray-blue for subtext */
-  --accent:#0077ff;        /* main glossy blue */
+  --card:#0b0e13;          /* dark navy cards */
+  --ink:#e6ecff;           /* bright readable text */
+  --muted:#b0b8d4;         /* softer subtext but still visible */
+  --accent:#0077ff;        /* glossy blue */
   --accent-ink:#ffffff;    /* white text on blue */
-  --link:#66aaff;          /* soft blue links */
-  --link-hover:#99cfff;    /* lighter blue on hover */
-  --border:#1c1f26;        /* dark border tone */
-  --code:#0d0f14;          /* dark code block background */
+  --link:#66aaff;          /* link blue */
+  --link-hover:#99cfff;    /* hover blue */
+  --border:#1e2633;        /* dark gray border */
+  --code:#141821;          /* dark background for code */
   --radius:18px;
   --maxw:980px;
-  --shadow:0 10px 25px rgba(0,119,255,0.25); /* soft blue glow */
+  --shadow:0 10px 25px rgba(0,119,255,0.25);
+}
+.btn--primary{
+  background:linear-gradient(135deg, #0077ff, #3399ff);
+  color:var(--accent-ink);
+  border-color:transparent;
+  box-shadow:0 0 15px rgba(0,119,255,0.6);
+}
+.btn--primary:hover{
+  background:linear-gradient(135deg, #3399ff, #66b3ff);
+  box-shadow:0 0 20px rgba(0,150,255,0.8);
 }
 
 *,*::before,*::after{box-sizing:border-box}
