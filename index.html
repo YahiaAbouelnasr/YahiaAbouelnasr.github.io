@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,91 +6,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Yahia Abouelnasr — Portfolio</title>
 <meta name="description" content="Projects and work by Yahia Abouelnasr, Computer Science student at Concordia University." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;600&display=swap" rel="stylesheet">
-<style>
-:root{
---bg: #e9e1d6; /* refined beige */
---card: #f7f3ee;
---ink: #232b2b;
---muted: #4b5d5b;
---accent: #476a4b; /* green */
---accent-ink: #ffffff;
---link: #594a4a; /* brown */
---link-hover: #3f3a3a;
---border: #d8d2ca;
---code: #efe9df;
---shadow: 0 10px 25px rgba(0,0,0,.06);
---radius: 18px;
---maxw: 980px;
-}
-
-
-*,*::before,*::after{box-sizing:border-box}
-html:focus-within{scroll-behavior:smooth}
-body,h1,h2,h3,p,ul{margin:0}
-img{max-width:100%;display:block}
-
-
-body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.65}
-.wrap{max-width:var(--maxw);margin:auto;padding:48px 20px}
-
-
-/* Header & Nav */
-.skip-link{position:absolute;left:-9999px}
-.skip-link:focus{left:16px;top:16px;background:#fff;padding:8px 12px;border-radius:8px;border:1px solid var(--border)}
-
-
-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
-.brand{font-family:"Source Serif 4",Georgia,serif}
-.brand h1{font-size:1.75rem;color:var(--accent)}
-.brand p{color:var(--muted);font-size:.95rem;margin-top:2px}
-
-
-nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{color:var(--link);text-decoration:none;font-weight:600}
-nav a:hover{color:var(--link-hover)}
-
-
-/* Hero */
-.hero{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);margin-bottom:28px}
-.hero h2{font-size:1.6rem;color:#2b3a2e;margin-bottom:6px}
-.hero p{font-size:1.05rem}
-
-
-.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.pill{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;color:var(--link);background:#fff;border:1px solid var(--border);padding:8px 12px;border-radius:999px}
-.pill:hover{color:var(--link-hover)}
-.cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:10px 14px;border-radius:12px;font-weight:700;box-shadow:var(--shadow)}
-
-
-/* Sections */
-section{margin-top:26px}
-section h2{font-size:1.3rem;color:var(--accent);margin:4px 0 12px;font-weight:800}
-
-
-.grid{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
-
-
-.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
-.card h3{font-size:1.1rem;margin:0 0 2px;color:#2b3a2e}
-.meta{font-size:.9rem;color:var(--muted)}
-.actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
-.btn{padding:8px 12px;border-radius:10px;border:1px solid var(--border);text-decoration:none;font-weight:600}
-.btn--ghost{background:#fff}
-.btn--primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
-
-
-code{background:var(--code);padding:2px 6px;border-radius:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95em}
-
-
-.skills{display:flex;gap:8px;flex-wrap:wrap}
-.tag{background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-weight:600;color:var(--muted)}
-
-
-footer{margin-top:36px;color:var(--muted);font-size:.92rem;text-align:center}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
+<a class="skip" href="#content">Skip to main content</a>
+<div class="wrap">
+<header>
+<div class="brand" aria-label="Site identity">
+<h1>Yahia Abouelnasr</h1>
+<p>Computer Science @ Concordia — building, learning, iterating.</p>
+</div>
+<nav aria-label="Primary">
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+<a class="cta" href="/Yahia_Abouelnasr_Resume.pdf" download>Download Résumé</a>
+</nav>
+</header>
+
+
+<main id="content">
+<section class="hero" aria-labelledby="about-title">
+<h2 id="about-title">About</h2>
+<p>Third-year CS student focused on data structures, algorithms, and clean software design. Below are representative projects with summaries and source links.</p>
+<div class="links" role="list">
+<a class="pill" href="mailto:yahiahelmy512@gmail.com">Email</a>
+<a class="pill" href="https://github.com/YahiaAbouelnasr" target="_blank" rel="noopener">GitHub</a>
+<a class="pill" href="https://www.linkedin.com/in/yahia-abouelnasr-348956272" target="_blank" rel="noopener">LinkedIn</a>
+<a class="pill" href="https://yahiaabouelnasr.github.io" target="_blank" rel="noopener">Website</a>
+</div>
+</section>
+
+
+<section id="projects" aria-labelledby="projects-title">
+<h2 id="projects-title" class="section">Selected Projects</h2>
+<div class="grid">
+<article class="card" aria-labelledby="list-title">
+<header>
+<h3 id="list-title">Java Custom Lists</h3>
+<p class="meta">Data structures • Performance testing</p>
+</header>
+<p>Implemented from-scratch versions of <code>ArrayList</code> and <code>LinkedList</code> with a lightweight harness to benchmark inserts, deletes, and lookups across sizes.</p>
+<div class="actions">
+<a class="btn btn--primary" href="https://github.com/YahiaAbouelnasr/CustomLists.Java" target="_blank" rel="noopener">View on GitHub</a>
+<a class="btn btn--ghost" href="#" aria-disabled="true">Readme</a>
+</div>
+</article>
+
+
+<article class="card" aria-labelledby="pq-title">
+<header>
+<h3 id="pq-title">Advanced Priority Queue</h3>
+<p class="meta">Parameterized heap • Min/Max modes</p>
+</header>
+<p>Built a dynamic <code>PriorityQueue</code> backed by a parameterized binary heap supporting both <code>min-heap</code> and <code>max-heap</code> behavior. Includes complexity notes and timing comparisons.</p>
+<div class="actions">
+<a class="btn btn--primary" href="https://github.com/YahiaAbouelnasr/Advanced-Priority-Queue-Java" target="_blank" rel="noopener">View on GitHub</a>
+<a class="btn btn--ghost" href="#" aria-disabled="true">Design Notes</a>
+</div>
+</article>
+</div>
+</section>
+
+
+<section id="skills" aria-labelledby="skills-title">
+<h2 id="skills-title" class="section">Skills</h2>
+<div class="skills" role="list">
+<span class="tag" role="listitem">Java</span>
+<span class="tag" role="listitem">OOP & Design</span>
+<span class="tag" role="listitem">Data Structures</span>
 </html>
