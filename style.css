@@ -55,25 +55,44 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 nav.tabs{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 
 nav.tabs .tab{
+  position:relative;                 /* allows the glow layer */
   display:inline-flex;
   align-items:center;
   text-decoration:none;
   font-weight:700;
-  padding:8px 14px;
-  border-radius:999px;               /* <- pill shape */
+  padding:10px 16px;
+  border-radius:999px;               /* pill shape */
   color:var(--link);
-  background:#0d111a;                /* same as pill/tag bg */
+  background:#0d111a;
   border:1px solid var(--border);
   transition:background .25s,color .25s,box-shadow .25s,transform .1s,border-color .25s;
 }
 
-nav.tabs .tab:hover,
-nav.tabs .tab.active{                /* hover + active glow */
+nav.tabs .tab:hover{
   color:#fff;
   background:var(--accent);
   border-color:#3399ff;
   box-shadow:0 0 14px rgba(0,119,255,.7);
   transform:translateY(-1px);
+}
+
+/* persistent glow for the active tab */
+nav.tabs .tab.active{
+  color:#fff;
+  background:var(--accent);
+  border-color:#3399ff;
+  box-shadow:
+    0 8px 30px rgba(0,119,255,.35),
+    0 0 60px rgba(0,119,255,.25);
+}
+nav.tabs .tab.active::after{
+  content:"";
+  position:absolute;
+  inset:-10px -14px;                 /* grows the halo a bit */
+  border-radius:999px;
+  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.22), transparent 70%);
+  filter:blur(8px);
+  z-index:-1;
 }
 
 nav.tabs .tab:focus-visible{
@@ -113,13 +132,6 @@ nav.tabs .tab:focus-visible{
   transition:background .25s,color .25s,box-shadow .25s,border-color .25s,transform .1s;
 }
 
-.tag:hover{
-  color:#fff;
-  background:var(--accent);
-  border-color:#3399ff;
-  box-shadow:0 0 12px rgba(0,119,255,.65);  /* glow */
-  transform:translateY(-1px);
-}
 
 
 /* Pills */
