@@ -103,6 +103,25 @@ nav.tabs .tab:focus-visible{
   text-shadow:0 0 15px rgba(0,119,255,0.7);
 }
 
+.tag{
+  background:#0d111a;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:6px 10px;
+  font-weight:600;
+  color:var(--muted);
+  transition:background .25s,color .25s,box-shadow .25s,border-color .25s,transform .1s;
+}
+
+.tag:hover{
+  color:#fff;
+  background:var(--accent);
+  border-color:#3399ff;
+  box-shadow:0 0 12px rgba(0,119,255,.65);  /* glow */
+  transform:translateY(-1px);
+}
+
+
 /* Pills */
 .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .pill{
