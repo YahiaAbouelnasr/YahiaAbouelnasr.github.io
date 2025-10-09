@@ -206,7 +206,9 @@ code{
   color:var(--ink);
 }
 
+/* Skills chips */
 .skills{display:flex;gap:8px;flex-wrap:wrap}
+
 .tag{
   background:#0d111a;
   border:1px solid var(--border);
@@ -214,7 +216,16 @@ code{
   padding:6px 10px;
   font-weight:600;
   color:var(--muted);
+  transition:background .25s,color .25s,box-shadow .25s,border-color .25s,transform .1s;
 }
+.tag:hover{
+  color:#fff;
+  background:var(--accent);
+  border-color:#3399ff;
+  box-shadow:0 0 12px rgba(0,119,255,.65);  /* glow */
+  transform:translateY(-1px);
+}
+
 
 footer{
   margin-top:36px;
