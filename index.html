@@ -18,91 +18,93 @@
         <h1>Yahia Abouelnasr</h1>
         <p>Computer Science @ Concordia</p>
       </div>
-      <nav aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+
+      <!-- Tabs: Home / Projects -->
+      <nav aria-label="Primary" class="tabs">
+        <a href="#home" class="tab" data-tab="home">Home</a>
+        <a href="#projects" class="tab" data-tab="projects">Projects</a>
         <a class="cta" href="Yahia-Abouelnasr-Resume.pdf" download>Download Résumé</a>
       </nav>
     </header>
 
     <main id="content">
-      <section class="hero" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <p>
-          Third-year CS student focused on data structures, algorithms, and clean software design. 
-          Below are representative projects with summaries and source links.
-        </p>
-        <div class="links" role="list">
-          <a class="pill" href="mailto:yhelmy0401@gmail.com">Email</a>
-          <a class="pill" href="https://github.com/YahiaAbouelnasr" target="_blank" rel="noopener">GitHub</a>
-          <a class="pill" href="https://www.linkedin.com/in/yahia-abouelnasr-348956272" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </section>
+      <!-- HOME VIEW -->
+      <div id="home-view" data-view="home">
+        <section class="hero" aria-labelledby="about-title">
+          <h2 id="about-title">About</h2>
+          <p>
+            Third-year CS student focused on data structures, algorithms, and clean software design.
+            Below are representative projects with summaries and source links.
+          </p>
+          <div class="links" role="list">
+            <a class="pill" href="mailto:yhelmy0401@gmail.com">Email</a>
+            <a class="pill" href="https://github.com/YahiaAbouelnasr" target="_blank" rel="noopener">GitHub</a>
+            <a class="pill" href="https://www.linkedin.com/in/yahia-abouelnasr-348956272" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </section>
 
-      <section id="projects" aria-labelledby="projects-title">
-  <h2 id="projects-title" class="section">Selected Projects</h2>
-  <div class="grid">
-    <!-- Java Custom Lists -->
-    <article class="card" aria-labelledby="list-title">
-      <header>
-        <h3 id="list-title">Java Custom Lists</h3>
-        <p class="meta">Data structures • Performance testing</p>
-      </header>
-      <p>
-        Implemented from-scratch versions of <code>ArrayList</code> and <code>LinkedList</code> with a lightweight harness
-        to benchmark inserts, deletes, and lookups across sizes.
-        
-      </p>
-      <div class="actions">
-        <a class="btn btn--primary"
-           href="https://github.com/YahiaAbouelnasr/CustomLists.Java"
-           target="_blank" rel="noopener">
-          View Code
-        </a>
+        <section id="skills" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="section">Skills</h2>
+          <div class="skills" role="list">
+            <span class="tag" role="listitem">Java</span>
+            <span class="tag" role="listitem">Python</span>
+            <span class="tag" role="listitem">OOP and Design</span>
+            <span class="tag" role="listitem">Algorithms</span>
+            <span class="tag" role="listitem">Data Structures</span>
+            <span class="tag" role="listitem">Operating Systems</span>
+            <span class="tag" role="listitem">Data Analysis</span>
+          </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="section">Contact</h2>
+          <p>Open to internships and collaboration. Feel free to reach out via email.</p>
+          <p><a class="pill glow" href="mailto:yhelmy0401@gmail.com">yhelmy0401@gmail.com</a></p>
+        </section>
       </div>
-    </article>
 
-    <!-- Advanced Priority Queue -->
-    <article class="card" aria-labelledby="pq-title">
-      <header>
-        <h3 id="pq-title">Advanced Priority Queue</h3>
-        <p class="meta">Parameterized heap • Min/Max modes</p>
-      </header>
-      <p>
-        Built a dynamic <code>PriorityQueue</code> backed by a parameterized binary heap supporting both
-        <code>min-heap</code> and <code>max-heap</code> behavior. Includes complexity notes and timing comparisons.
-      </p>
-      <div class="actions">
-        <a class="btn btn--primary"
-           href="https://github.com/YahiaAbouelnasr/Advanced-Priority-Queue-Java"
-           target="_blank" rel="noopener">
-          View Code
-        </a>
-      </div>
-    </article>
-  </div>
-</section>
+      <!-- PROJECTS VIEW (hidden by default; shown when Projects tab active) -->
+      <section id="projects" aria-labelledby="projects-title" hidden>
+        <h2 id="projects-title" class="section">Selected Projects</h2>
+        <div class="grid">
+          <!-- Java Custom Lists -->
+          <article class="card" aria-labelledby="list-title">
+            <header>
+              <h3 id="list-title">Java Custom Lists</h3>
+              <p class="meta">Data structures • Performance testing</p>
+            </header>
+            <p>
+              Implemented from-scratch versions of <code>ArrayList</code> and <code>LinkedList</code>
+              with a lightweight harness to benchmark inserts, deletes, and lookups across sizes.
+            </p>
+            <div class="actions">
+              <a class="btn btn--primary"
+                 href="https://github.com/YahiaAbouelnasr/CustomLists.Java"
+                 target="_blank" rel="noopener">
+                View Code
+              </a>
+            </div>
+          </article>
 
-      <section id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title" class="section">Skills</h2>
-        <div class="skills" role="list">
-          <span class="tag" role="listitem">Java</span>
-          <span class="tag" role="listitem">Python</span>
-          <span class="tag" role="listitem">OOP and Design</span>
-          <span class="tag" role="listitem">Algorithms</span>
-          <span class="tag" role="listitem">Data Structures</span>
-          <span class="tag" role="listitem">Operating Systems</span>
-          <span class="tag" role="listitem">Data Analysis</span>
+          <!-- Advanced Priority Queue -->
+          <article class="card" aria-labelledby="pq-title">
+            <header>
+              <h3 id="pq-title">Advanced Priority Queue</h3>
+              <p class="meta">Parameterized heap • Min/Max modes</p>
+            </header>
+            <p>
+              Built a dynamic <code>PriorityQueue</code> backed by a parameterized binary heap supporting both
+              <code>min-heap</code> and <code>max-heap</code> behavior. Includes complexity notes and timing comparisons.
+            </p>
+            <div class="actions">
+              <a class="btn btn--primary"
+                 href="https://github.com/YahiaAbouelnasr/Advanced-Priority-Queue-Java"
+                 target="_blank" rel="noopener">
+                View Code
+              </a>
+            </div>
+          </article>
         </div>
-      </section>
-
-      <section id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title" class="section">Contact</h2>
-        <p>Open to internships and collaboration. Feel free to reach out via email.</p>
-        <p>
-          <a class="pill glow" href="mailto:yhelmy0401@gmail.com">yhelmy0401@gmail.com</a>
-        </p>
       </section>
     </main>
 
@@ -112,6 +114,27 @@
   </div>
 
   <script>
+    // Tab logic: show Home or Projects based on hash
+    const tabs = document.querySelectorAll('.tabs .tab');
+    const homeView = document.getElementById('home-view');
+    const projectsView = document.getElementById('projects');
+
+    function show(view) {
+      const isProjects = (view === 'projects');
+      homeView.hidden = isProjects;
+      projectsView.hidden = !isProjects;
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === view));
+    }
+
+    function initFromHash() {
+      const view = (location.hash.replace('#', '') === 'projects') ? 'projects' : 'home';
+      show(view);
+    }
+
+    window.addEventListener('hashchange', initFromHash);
+    initFromHash(); // initial render
+
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
