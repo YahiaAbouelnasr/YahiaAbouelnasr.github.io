@@ -1,14 +1,14 @@
 :root{
-  --bg:#000000;
-  --card:#0b0e13;
-  --ink:#e6ecff;
-  --muted:#b0b8d4;
-  --accent:#0077ff;
-  --accent-ink:#ffffff;
-  --link:#66aaff;
-  --link-hover:#99cfff;
-  --border:#1e2633;
-  --code:#141821;
+  --bg:#000000;            /* black background */
+  --card:#0b0e13;          /* dark navy cards */
+  --ink:#e6ecff;           /* bright readable text */
+  --muted:#b0b8d4;         /* softer subtext but still visible */
+  --accent:#0077ff;        /* glossy blue */
+  --accent-ink:#ffffff;    /* white text on blue */
+  --link:#66aaff;          /* link blue */
+  --link-hover:#99cfff;    /* hover blue */
+  --border:#1e2633;        /* dark gray border */
+  --code:#141821;          /* dark background for code */
   --radius:18px;
   --maxw:980px;
   --shadow:0 10px 25px rgba(0,119,255,0.25);
@@ -45,11 +45,36 @@ a:hover{color:var(--link-hover)}
 .wrap{max-width:var(--maxw);margin:auto;padding:48px 20px}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:16px;top:16px;background:#fff;padding:8px 12px;border-radius:8px;border:1px solid var(--border)}
+
 header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}
 .brand{font-family:"Source Serif 4",Georgia,serif}
 .brand h1{margin:0;font-size:1.75rem;color:var(--accent);text-shadow:0 0 15px rgba(0,119,255,0.7);}
 .brand p{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+/* Tabs */
+nav.tabs{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+nav.tabs .tab{
+  text-decoration:none;
+  font-weight:700;
+  padding:8px 10px;
+  border-radius:10px;
+  color:var(--link);
+  border:1px solid transparent;
+  transition:.2s;
+}
+nav.tabs .tab:hover{
+  color:#fff;
+  background:#0d111a;
+  border-color:var(--border);
+  box-shadow:0 0 10px rgba(0,119,255,.35);
+}
+nav.tabs .tab.active{
+  color:#fff;
+  background:var(--accent);
+  border-color:transparent;
+  box-shadow:0 0 15px rgba(0,119,255,.6);
+}
+
 .cta{
   display:inline-flex;align-items:center;gap:.5rem;
   background:var(--accent);
@@ -88,6 +113,7 @@ nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
   text-shadow:0 0 15px rgba(0,119,255,0.7);
 }
 
+/* Pills */
 .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .pill{
   display:inline-flex;
@@ -128,11 +154,7 @@ section::before{
 .grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
 
-.card h3{
-  margin:0 0 2px;
-  font-size:1.1rem;
-  color:var(--ink);
-}
+.card h3{margin:0 0 2px;font-size:1.1rem;color:var(--ink)}
 .meta{font-size:.9rem;color:var(--muted)}
 .card p{color:var(--ink)}
 .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
@@ -153,6 +175,7 @@ section::before{
   border-color:#3399ff;
   box-shadow:0 0 10px rgba(0,119,255,0.5);
 }
+
 code{
   background:var(--code);
   padding:2px 6px;
@@ -161,6 +184,7 @@ code{
   font-size:.95em;
   color:var(--ink);
 }
+
 .skills{display:flex;gap:8px;flex-wrap:wrap}
 .tag{
   background:#0d111a;
@@ -170,6 +194,7 @@ code{
   font-weight:600;
   color:var(--muted);
 }
+
 footer{
   margin-top:36px;
   color:var(--muted);
