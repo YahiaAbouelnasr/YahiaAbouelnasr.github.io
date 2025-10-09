@@ -51,47 +51,54 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 .brand h1{margin:0;font-size:1.75rem;color:var(--accent);text-shadow:0 0 15px rgba(0,119,255,0.7);}
 .brand p{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
 
-/* ───────── Tabs (Home / Projects) ───────── */
+/* ───────── Tabs (Home / Projects) — halo only, no blue fill ───────── */
 nav.tabs{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 
 nav.tabs .tab{
-  position:relative;                /* enables halo layer */
+  position:relative;                 /* for the halo layer */
   display:inline-flex;
   align-items:center;
   text-decoration:none;
   font-weight:700;
   padding:10px 16px;
-  border-radius:999px;              /* pill shape */
+  border-radius:999px;               /* pill shape */
   color:var(--link);
-  background:#0d111a;
+  background:#0d111a;                /* keep dark, no blue fill */
   border:1px solid var(--border);
-  transition:background .25s,color .25s,box-shadow .25s,transform .1s,border-color .25s;
-  z-index:0;                        /* make sure halo sits behind */
+  transition:color .25s,border-color .25s,transform .1s,box-shadow .25s;
+  z-index:0;                         /* halo goes behind */
 }
 
-nav.tabs .tab:hover{
-  color:#fff;
-  background:var(--accent);
-  border-color:#3399ff;
-  box-shadow:0 0 14px rgba(0,119,255,.7);
-  transform:translateY(-1px);
-}
-
-/* persistent glowing look for the active tab */
-nav.tabs .tab.active{
-  color:#fff;
-  background:var(--accent);
-  border-color:#3399ff;
-  box-shadow:var(--shadow);
-}
-nav.tabs .tab.active::after{
+/* persistent outer glow for ALL tabs */
+nav.tabs .tab::after{
   content:"";
   position:absolute;
-  inset:-10px -14px;                /* grow halo beyond pill */
+  inset:-10px -14px;                 /* grow the halo */
   border-radius:999px;
-  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.22), transparent 70%);
+  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.16), transparent 70%);
   filter:blur(10px);
   z-index:-1;
+}
+
+/* hover = stronger halo + subtle lift, but NO fill */
+nav.tabs .tab:hover{
+  color:#fff;
+  border-color:#3399ff;
+  transform:translateY(-1px);
+}
+nav.tabs .tab:hover::after{
+  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.26), transparent 70%);
+}
+
+/* active = strongest halo, still dark background (no fill) */
+nav.tabs .tab.active{
+  color:#fff;
+  border-color:#3399ff;
+  background:#0d111a;                /* keep dark even when active */
+}
+nav.tabs .tab.active::after{
+  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.34), transparent 70%);
+  filter:blur(12px);
 }
 
 nav.tabs .tab:focus-visible{
