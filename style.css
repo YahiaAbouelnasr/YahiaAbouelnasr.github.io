@@ -51,60 +51,63 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;ma
 .brand h1{margin:0;font-size:1.75rem;color:var(--accent);text-shadow:0 0 15px rgba(0,119,255,0.7);}
 .brand p{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
 
-/* ───────── Tabs (Home / Projects) — halo only, no blue fill ───────── */
+/* ───────── Tabs (Home / Projects): active = filled, inactive = halo only ───────── */
 nav.tabs{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 
 nav.tabs .tab{
-  position:relative;                 /* for the halo layer */
+  position:relative;                 /* halo layer */
   display:inline-flex;
   align-items:center;
   text-decoration:none;
   font-weight:700;
   padding:10px 16px;
-  border-radius:999px;               /* pill shape */
+  border-radius:999px;               /* pill */
   color:var(--link);
-  background:#0d111a;                /* keep dark, no blue fill */
+  background:#0d111a;                /* inactive stays dark */
   border:1px solid var(--border);
   transition:color .25s,border-color .25s,transform .1s,box-shadow .25s;
-  z-index:0;                         /* halo goes behind */
+  z-index:0;
 }
 
-/* persistent outer glow for ALL tabs */
+/* Halo for ALL tabs (subtle by default) */
 nav.tabs .tab::after{
   content:"";
   position:absolute;
-  inset:-10px -14px;                 /* grow the halo */
+  inset:-10px -14px;
   border-radius:999px;
   background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.16), transparent 70%);
   filter:blur(10px);
   z-index:-1;
 }
 
-/* hover = stronger halo + subtle lift, but NO fill */
-nav.tabs .tab:hover{
+/* Inactive hover: stronger halo, no blue fill */
+nav.tabs .tab:not(.active):hover{
   color:#fff;
   border-color:#3399ff;
   transform:translateY(-1px);
 }
-nav.tabs .tab:hover::after{
+nav.tabs .tab:not(.active):hover::after{
   background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.26), transparent 70%);
 }
 
-/* active = strongest halo, still dark background (no fill) */
+/* Active tab: solid blue + strongest halo */
 nav.tabs .tab.active{
   color:#fff;
-  border-color:#3399ff;
-  background:#0d111a;                /* keep dark even when active */
+  background:linear-gradient(135deg, #0077ff, #3399ff);  /* filled */
+  border-color:transparent;
+  box-shadow:var(--shadow);
 }
 nav.tabs .tab.active::after{
-  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.34), transparent 70%);
+  background:radial-gradient(60% 120% at 50% 50%, rgba(0,119,255,.40), transparent 70%);
   filter:blur(12px);
 }
 
+/* Keyboard focus */
 nav.tabs .tab:focus-visible{
   outline:2px solid #66b3ff;
   outline-offset:2px;
 }
+
 
 /* ───────── Cards / Sections ───────── */
 .hero,
